@@ -388,7 +388,7 @@ export interface EventHandlerResult {
   item?: MaybeFormattedItem
   delta?: {
     transcript?: string
-    audio?: Int16Array
+    audio?: string
     text?: string
     arguments?: string
   }

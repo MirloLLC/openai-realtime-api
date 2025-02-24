@@ -425,6 +425,12 @@ export class RealtimeClient extends RealtimeEventHandler<
   /**
    * Appends user audio to the existing audio buffer.
    */
+  appendInputAudio(audio: string) {
+    this.realtime.send('input_audio_buffer.append', {
+      audio
+    })
+  }
+  /*  
   appendInputAudio(arrayBuffer: Int16Array | ArrayBuffer) {
     assert(!this.isRelay, 'Unable to append input audio directly in relay mode')
 
@@ -439,6 +445,7 @@ export class RealtimeClient extends RealtimeEventHandler<
       )
     }
   }
+  */
 
   /**
    * Forces the model to generate a response.

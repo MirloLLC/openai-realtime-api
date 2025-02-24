@@ -354,14 +354,16 @@ export class RealtimeConversation {
       // This never gets renderered; we care about the formatted data instead.
       // (item.content[content_index] as Realtime.AudioContentPart)!.audio += delta;
 
+      /*
       const arrayBuffer = base64ToArrayBuffer(delta)
       const appendValues = new Int16Array(arrayBuffer)
       item.formatted.audio = mergeInt16Arrays(
         item.formatted.audio,
         appendValues
       )
+      */
 
-      return { item, delta: { audio: appendValues } }
+      return { item, delta: { audio: delta } }
     },
 
     'response.text.delta': (event) => {

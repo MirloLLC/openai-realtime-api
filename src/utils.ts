@@ -73,6 +73,7 @@ export function arrayBufferToBase64(
   if (arrayBuffer instanceof Float32Array) {
     arrayBuffer = floatTo16BitPCM(arrayBuffer)
   } else if (arrayBuffer instanceof Int16Array) {
+    // @ts-ignore
     arrayBuffer = arrayBuffer.buffer
   }
 
